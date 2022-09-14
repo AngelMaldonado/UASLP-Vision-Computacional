@@ -1,3 +1,13 @@
 *.pdf
 desktop.ini
 .temp
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.bbl
+*.blg
+*.out
+*.bcf
+*.run.xml

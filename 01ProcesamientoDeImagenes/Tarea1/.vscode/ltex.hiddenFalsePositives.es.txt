@@ -1,0 +1,2 @@
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\QCómputo Bioinspirado Prof:\\E$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
