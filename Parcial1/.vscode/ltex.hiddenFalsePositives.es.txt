@@ -1,0 +1,6 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qde transformación\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qde recorte Ej.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qde rotación\\E$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\QEdge Detection Using OpenCV\\E$"}
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\QEroding and Dilating\\E$"}
