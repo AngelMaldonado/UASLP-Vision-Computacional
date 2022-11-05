@@ -1,0 +1,58 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+
+\setlength{\parindent}{0pt}
+\fancyhead{}
+\setlength{\headheight}{27.18335pt}
+\addtolength{\topmargin}{-15.18335pt}
+\fancyhead[L]{
+    Tarea 3: Investigación de transformada de Fourier \\
+    Angel de Jesús Maldonado Juárez 
+}
+\fancyhead[R]{
+    Visión Computacional \\
+    20/09/2022
+}
+
+\begin{document}
+\section*{Transformada de Fourier}
+La \emph{transformada de Fourier} esencialmente toma una señal para representarla en trazos circulares, esto para conseguir descomponer alguna señal en las distintas partes que la conforman. Por ejemplo, en una señal de sonido, la transformada de Fourier puede descomponerla en las señales de más baja frecuencia (\emph{bass}), de frecuencia mediana (\emph{middle}), y de alta frecuencia (\emph{treble}).
+
+La transformada de Fourier se define matemáticamente como la delimitación de una \emph{Serie de Fourier Compleja}, y transforma el eje de tiempo de una señal, en un eje de frecuencias:
+
+\begin{equation}
+    \hat{f}(w)=\mathcal{F}(f(w))=\int_{-\infty}^{\infty} f(x)e^{-iwx} \,dx
+\end{equation}
+
+Donde $f(x)$ es la señal a transformar (filtrar), $e^{-iwx}$ es la frecuencia para el trazo circular que representa la señal original, $\hat{f}(w)$ es un número complejo que corresponde a la fuerza de las frecuencias con base en la señal original. Esta fórmula establece un límite de muestra para la señal utilizando la integral. La versión inversa de esta ecuación, vuelve a \emph{codificar} las frecuencias en la señal original:
+
+\begin{equation}
+    f(x)=\mathcal{F}^{-1}(\hat{f}(w))=\frac{1}{2\pi}\int_{-\infty}^{\infty}\hat{f}(w)e^{iwx} \, dw
+\end{equation}
+
+\section*{Transformada discreta de Fourier}
+La \emph{transformada discreta de Fourier} básicamente toma una cierta cantidad de puntos muestra en el tiempo de la señal original para generar las frecuencias correspondientes a cada tipo de señal utilizando sumatorias en vez de integrales.
+La fórmula para determinar un componente de una frecuencia es la siguiente:
+
+\begin{equation}
+    X_k=\Sigma_{n=0}^{N-1}x_n\cdot e^{-i2\pi kn/N}
+\end{equation}
+
+Donde $N$ es el número de muestras en el tiempo, $n$ es el punto específico en el tiempo, $x_n$ el valor de la señal en el tiempo $n$, $k$ frecuencia actual que se considera (0Hz hasta N-1Hz), $n/N$ es el porcentaje de tiempo que ha transcurrido durante las iteraciones de la sumatoria. Existe otra versión de la misma ecuación, pero para determinar un punto en el tiempo $x_n$:
+
+\begin{equation}
+    x_n=\frac{1}{N}\Sigma_{n=0}^{N-1}X_k\cdot e^{-i2\pi kn/N}
+\end{equation}
+
+\section*{Aplicaciones de la transformada de Fourier en Visión por Computadora}
+La Transformada de Fourier se utiliza bastante en el procesamiento digital de imágenes, ya que gracias a esta se pueden manipular directamente las frecuencias de luz que fueron capturadas en una imagen. Y el \textbf{dominio de frecuencia} de una imagen indica, por ejemplo, los bordes o esquinas si se observan los puntos de alta frecuencias. Por lo tanto, gracias a la Transformada de Fourier, se puede obtener información espacial de una imagen de una manera óptima, ya sea para detección de bordes, esquinas, patrones, o incluso la orientación de algunos de los objetos en la escena de la imagen.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\nocite{*}
+\end{document}
