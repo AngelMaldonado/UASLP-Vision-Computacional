@@ -1,0 +1,49 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{url, hyperref}
+
+\setlength{\parindent}{0pt}
+
+\title{\vspace{-3cm}Examen Parcial 3: Detección de objetos en imágenes usando OpenCV DNN}
+\author{
+    Angel de Jesús Maldonado Juárez\\
+    Universidad Autónoma de San Luis Potosí\\
+    Facultar de Ingeniería - Ing. En Sistemas Inteligentes\\
+    \textbf{Materia:} Visión Computacional\\
+    \textbf{Prof:} Dr. César Augusto Puente Montejano\\
+    \textbf{Autor:} Angel de Jesús Maldonado Juárez
+}
+\date{\textbf{Fecha de entrega:} viernes 2 de diciembre de 2022}
+
+\begin{document}
+\maketitle
+
+\hrule
+
+\section{Planteamiento del problema}
+\subsection{Conjunto de datos MS COCO}
+El conjunto de datos \emph{Microsoft COCO} (\emph{Common Objects in Context}) fue lanzado en mayo del 2014 teniendo como contribuidores a Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollár, y C. Lawrence Zitnick. La versión más reciente del artículo de investigación fue lanzada en febrero del 2015, con más contribuyentes, y el repositorio público en \href{https://github.com/cocodataset/cocodataset.github.io}{\emph{GitHub}} tiene actualizaciones constantes hasta la fecha. Este conjunto de datos fue creado con la finalidad de resolver 3 problemas principales en el ámbito del reconocimiento de escenas: detección de objetos en perspectivas no-canónicas, razonamiento contextual entre objetos, y localización precisa de objetos en 2D. Se compone por \textbf{91 categorías de objetos}, \textbf{82} de estas tienen más de \textbf{5000} instancias etiquetadas. En total el conjunto de datos tiene \textbf{2500000} instancias etiquetadas en \textbf{328000} imágenes.
+
+Algunas de los ámbitos en los que \emph{MS COCO} se ha utilizado son: clasificación de imágenes, detección de objetos, etiquetado de escenas, entre otras.
+
+Actualmente \emph{MS COCO} puede conseguirse de manera gratuita en su enlace oficial: \url{https://cocodataset.org/#download}, donde además de poder descargar categorías completas, se puede hacer uso de su API de programación.
+
+Otros conjuntos de datos populares para el reconocimiento de objetos que existen son: \href{https://www.image-net.org/}{ImageNet} (similar a \emph{MS COCO}), \href{http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html}{CompCars} (imágenes de coches), y \href{https://visualqa.org/}{VQA} (Visual QA se utiliza para responder preguntas basadas en el contexto de la imagen).
+
+\subsection{Aplicación de MS COCO}
+En este trabajo se utiliza la biblioteca de \href{https://opencv.org/}{OpenCV} para la implementación de un programa que detecte objetos que pertenezcan a alguna(s) de la(s) clase(s) del conjunto de datos \emph{MS COCO}. La DNN (\emph{Deep Neural Network}) que se utiliza es.
+Para probar la red neuronal implementada se utiliza la cámara de un smartphone Android y se le muestran distintos objetos para los cuales se entrenó la red neuronal.
+
+\section{Descripción de la solución}
+
+\section{Descripción de los resultados}
+
+\section{Discusión}
+
+\section{Conclusión}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\nocite{*}
+\end{document}
